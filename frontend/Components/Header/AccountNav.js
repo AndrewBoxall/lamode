@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './AccountNav.css';
 import { Link } from 'react-router-dom';
 import cartIconImage from '../../images/bag-icon.jpg';
-import checkoutIconImage from '../../images/circlecheckout.png';
 import userIconImage from '../../images/user.svg';
 import {CartUserContext} from '../../javascript/CartUserContext';
 
