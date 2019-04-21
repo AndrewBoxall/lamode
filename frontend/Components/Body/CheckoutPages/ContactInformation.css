@@ -1,0 +1,41 @@
+.contact-information > h2 {
+  color: white;
+  font-family: Roboto, "Montserrat", "Segoe UI", Arial, sans-serif;
+  font-weight: bold;
+}
+.contact-information .data-input-container {
+  position: relative;
+  display: inline-block;
+  margin: 10px 0px;
+}
+.contact-information label {
+  color: #999999;
+  position: absolute;
+  font-size: 14px;
+  margin: 10px 0px;
+  padding-left: 10px;
+  top: 9px;
+  left: 0px;
+  transition: .5s;
+}
+.contact-information input {
+  background-color: #1a1a1a;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  padding: 20px 10px 10px 10px;
+  width: 100%;
+}
+.contact-information input:focus {
+  border-color: transparent;
+  box-shadow: 0 0 8px #e5d2b5;
+}
+.contact-information input:valid ~ label,
+.contact-information input:focus ~ label {
+  font-size: 12px;
+  top: -4px;
+}
+
