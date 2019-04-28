@@ -1,0 +1,70 @@
+.billing-information h2 {
+  color: white;
+  font-family: Roboto, "Montserrat", "Segoe UI", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+.billing-information p {
+  color: white;
+  font-family: Roboto, "Montserrat", "Segoe UI", Arial, sans-serif;
+  font-size: 12px;
+}
+.billing-information .data-input-container {
+  position: relative;
+  display: inline-block;
+  margin: 10px 0px;
+}
+.billing-information label {
+  color: #999999;
+  position: absolute;
+  font-size: 14px;
+  margin: 10px 0px;
+  padding-left: 10px;
+  top: 9px;
+  left: 0px;
+  transition: .5s;
+}
+.billing-information input {
+  background-color: #1a1a1a;
+  box-sizing: border-box;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  margin: 0 0 2px 0;
+  outline: none;
+  padding: 20px 10px 10px 10px;
+  width: 100%;
+}
+.billing-information input:valid ~ label,
+.billing-information input:focus ~ label {
+  font-size: 12px;
+  top: -5px;
+}
+.billing-information input:hover,
+.billing-information input:focus,
+.billing-information input:-webkit-autofill,
+.billing-information input:-webkit-autofill:hover, 
+.billing-information input:-webkit-autofill:focus, 
+.billing-information input:-webkit-autofill:active {
+  background-color: #303030;
+  border-bottom: 2px solid grey;
+  margin: 0 0 1px 0;
+  -webkit-text-fill-color: white
+}
+.cancel-order {
+  background-color: transparent;
+  border: none;
+  color: #ae9878;
+  cursor: pointer;
+  font-family: Roboto, "Montserrat", "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+}
+.cancel-order:hover {
+  color: #f3e9d9;
+}
+
+
+
+

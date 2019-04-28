@@ -1,0 +1,39 @@
+#checkout-page {
+  background-color: black;
+  box-sizing: border-box;
+  display: flex;
+  padding-bottom: 40px;
+}
+.main-container {
+  box-sizing: border-box;
+  display: inline-block;
+  font-family: Roboto, "Montserrat", "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+  margin-bottom: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 100%;
+}
+.proceed-button {
+  background-color: #ae9878;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  float: right;
+  font-family: Roboto, "Montserrat", "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+  outline: none;
+  padding: 20px 30px;
+}
+.return-link {
+  color: #ae9878;
+  font-family: Roboto, "Montserrat", "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+}
+@media only screen and (max-width: 900px){
+  #checkout-page {
+    flex-wrap: wrap;
+  }
+}

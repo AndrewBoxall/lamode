@@ -1,0 +1,14 @@
+#website-header {
+  background-color: white;
+  box-sizing: border-box;
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+#website-logo {
+  box-sizing: border-box;
+  left: 0px;
+  margin: 0px;
+  padding: 0px 0px 0px 15vw;
+}

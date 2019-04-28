@@ -1,0 +1,17 @@
+.checkout-progress {
+  color: white;
+  display: flex;
+  font-size: 14px;
+  list-style-type: none;
+  margin: 20px 0;
+  padding: 0;
+  justify-content: center;
+}
+.checkout-progress li {
+  margin: 5px;
+}
+.checkout-progress li a {
+  color: white;
+  font-family: Roboto, "Montserrat", "Segoe UI", Arial, sans-serif;
+  text-decoration: none;
+}

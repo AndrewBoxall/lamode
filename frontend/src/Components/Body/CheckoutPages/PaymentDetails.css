@@ -1,0 +1,74 @@
+#payment-details {
+  border: 1px solid grey;
+  border-radius: 10px;
+  width: 20%;
+  margin: 30px 40% 170px 40%;
+}
+#payment-details .credit-card__icon {
+  font-size: 35px;
+  margin-right: 10px;
+}
+#payment-details h2 {
+  color: black;
+  font-family: Roboto, "Montserrat", "Segoe UI", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+#payment-details input {
+  border: 1px solid #333333;
+  color: black;
+  font-size: 14px;
+  outline: none;
+  margin: 0 10px;
+  padding: 10px 10px;
+  width: calc(100% - 40px);
+}
+#payment-details label {
+  color: #999999;
+  display: block;
+  font-size: 14px;
+  margin: 15px 0 5px 0;
+  padding-left: 10px;
+  transition: .5s;
+}
+#payment-details p {
+  color: black;
+  font-family: Roboto, "Montserrat", "Segoe UI", Arial, sans-serif;
+  font-size: 12px;
+  margin: 0 10px;
+}
+
+#payment-details .accepted-payment {
+  display: flex;
+  margin-left: 10px;
+}
+#payment-details .accepted-payment input {
+  margin: 12px 2px 12px 0;
+  width: 10px;
+}
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+.confirm-purchase {
+  background-color: #ebb76a;
+  border: 1px solid #ae9878;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  font-family: Roboto, "Montserrat", "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+  outline: none;
+  margin: 10px 10%;
+  padding: 15px;
+  transition: .5s;
+  width: 80%;
+}
+.confirm-purchase:hover {
+  background-color: #ebb76a;
+  border: 1px solid white;
+  color: black;
+}

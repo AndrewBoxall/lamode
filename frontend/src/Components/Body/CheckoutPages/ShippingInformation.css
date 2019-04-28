@@ -1,0 +1,46 @@
+#shipping-information > h2 {
+  color: white;
+  font-family: Roboto, "Montserrat", "Segoe UI", Arial, sans-serif;
+  font-weight: bold;
+}
+#shipping-information .data-input-container {
+  position: relative;
+  display: inline-block;
+  margin: 10px 0px;
+}
+#shipping-information label {
+  color: #999999;
+  position: absolute;
+  font-size: 14px;
+  margin: 10px 0px;
+  padding-left: 10px;
+  top: 9px;
+  left: 0px;
+  transition: .5s;
+}
+#shipping-information input {
+  background-color: #1a1a1a;
+  box-sizing: border-box;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  margin: 0 0 2px 0;
+  outline: none;
+  padding: 20px 10px 10px 10px;
+  width: 100%;
+}
+#shipping-information input:focus {
+  border-color: transparent;
+}
+#shipping-information input:valid ~ label,
+#shipping-information input:focus ~ label {
+  font-size: 12px;
+  top: -5px;
+}
+#shipping-information input:hover,
+#shipping-information input:focus {
+  background-color: #303030;
+  border-bottom: 2px solid grey;
+  margin: 0 0 1px 0;
+}

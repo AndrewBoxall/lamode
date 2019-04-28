@@ -1,0 +1,41 @@
+.quantity-selector {
+  box-sizing: border-box;
+  display: block;
+  width: 104px;
+  margin: auto;
+  margin-top: 10px;
+}
+.qty-add,
+.qty-subtract,
+.qty-val {
+  appearance: none;
+  background-color: white;
+  border: 1px solid #e1e1e1;
+  box-sizing: border-box;
+  font-family: "Montserrat", Arial;
+  font-size: 16px;
+  width: 30px;
+  height: 30px;
+  outline: none;
+  cursor: pointer;
+  float: left;
+  text-align: center;
+}
+.qty-val {
+  border-left: none;
+  border-right: none;
+  font-size: 12px;
+  width: 35px;
+}
+.qty-subtract:hover,
+.qty-add:hover {
+  background-color: #d8d8d8;
+}
+.qty-val::-webkit-inner-spin-button,
+.qty-val::-webkit-outer-spin-button {
+  -webkit-appearance: none; 
+}
+.qty-subtract:hover,
+.qty-add:hover {
+  background-color: #d8d8d8;
+}

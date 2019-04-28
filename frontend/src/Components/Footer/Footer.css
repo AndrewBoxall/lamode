@@ -1,0 +1,17 @@
+#website-footer {
+  background-color: black;
+  border-top: 1px solid grey;
+  display: inline-block;
+  font-size: 0px;
+  margin: 0px;
+  padding: 20px 0px 0px 0px;
+  width: 100%;
+}
+.copyright {
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-family: "Montserrat", Arial;
+  font-size: 10px;
+}
