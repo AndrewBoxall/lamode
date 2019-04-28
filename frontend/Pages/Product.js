@@ -17,13 +17,7 @@ class Product extends Component {
 			let productName = this.props.match.params.productname;	
 			let fetchUrl = `http://localhost:3000/lamode/categories/any/any/${productName}`;
 			let data;
-			alert('this.props.match.params: ' + this.props.match.params);
-			alert('this.props.match.params.main: ' + this.props.match.params.main);
-			alert('this.props.match.params.sub: ' + this.props.match.params.sub);
-			alert(productName);
-			alert(fetchUrl);
-			console.log(productName);
-			console.log(fetchUrl);
+			
 			data = await getProducts(fetchUrl);
 
 			this.setState({product: data});
