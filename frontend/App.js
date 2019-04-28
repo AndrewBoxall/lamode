@@ -11,9 +11,6 @@ import Home from './Pages/Home';
 import {CartUserContext} from './javascript/CartUserContext';
 import {shoppingCart} from './javascript/shoppingCart';
 
-import PaymentDetails from './Components/Body/CheckoutPages/PaymentDetails';
-import CheckoutComplete from './Components/Body/CheckoutPages/CheckoutComplete';
-
 const Product = lazy(() => import('./Pages/Product'));
 const Footer = lazy(() => import('./Components/Footer/Footer'));
 const Cart = lazy(() => import('./Pages/Cart'));
