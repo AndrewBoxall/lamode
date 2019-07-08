@@ -7,9 +7,15 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 
 import Header from './Components/Header/Header';
 import Home from './Pages/Home';
+//import { withCookies } from 'react-cookie';
 
-import {CartUserContext} from './javascript/CartUserContext';
-import {shoppingCart} from './javascript/shoppingCart';
+import { CartUserContext } from './javascript/CartUserContext';
+import { addToCart, removeFromCart, updateItemQty } from './javascript/cartFunctions';
+import createSession from './javascript/createSession';
+import { loadShopItems } from './javascript/loadShopItems';
+import { loadShopItemssql } from './javascript/loadShopItemsMSSQL';
+import PaymentDetails from './Components/Body/CheckoutPages/PaymentDetails';
+var Cookies = require('js-cookie');
 
 const Product = lazy(() => import('./Pages/Product'));
 const Footer = lazy(() => import('./Components/Footer/Footer'));
@@ -23,52 +29,58 @@ library.add(fab, fas);
 class App extends Component {
   constructor(props){
     super(props);
+    //const cookies = this.props.cookies;
+    const emptyCart = {
+      cartItems: {},
+      totalItems: 0,
+      totalPrice: 0
+    };
+
     this.state = {
-      userEmail: 'AppUserName',
-      userPassword: null,
-      login: this.userLogin,
-      shoppingCart: shoppingCart,
-      calculateCartTotal: this.calculateCartTotal,
-      addToShoppingCart: this.addToShoppingCart, 
-      updateCartItems: this.updateCartItems,
-      updateProductQuantity: this.updateProductQuantity,
-      shipping: shoppingCart.shipping,
-      totalPrice: shoppingCart.totalPrice
+      shoppingCart: Cookies.getJSON('cart') || emptyCart,
+      addCartItem: this.addCartItem, 
+      removeCartItem: this.removeCartItem,
+      updateCartItemQty: this.updateCartItemQty,
+      storeItems: null,
+      sessionToken: Cookies.getJSON('sessionId') || null
     }
   }
-  userLogin = (email, password) => {
-    
 
-  }
-  addToShoppingCart = (productId, product, size, quantity) => {
-    let updatedCart = [...this.state.shoppingCart]
-    updatedCart.push({
-      productId: productId,
-      product: product,
-      size: size,
-      quantity: quantity
+  componentDidMount(){
+    loadShopItemssql();
+    loadShopItems().then((response) => {
+      this.setState({storeItems: response})
     });
-
-    this.setState({shoppingCart: updatedCart, userEmail: 'newUserName'});
+    this.createNewSession();
   }
-  calculateCartTotal = (cart) => {
-    let totalCost = 0;
 
-    for (var i = 0; i < cart.length; i++){
-      totalCost += cart[i].product.price * cart[i].quantity;
+  async createNewSession(){
+    if (this.state.sessionToken === null) {
+      let sessionKey = await createSession();
+      Cookies.set('sessionId', sessionKey, {path: '/'});
+      this.setState({sessionToken: sessionKey});
+     // alert('creating new mount session: ' + sessionKey);
     }
-    return totalCost;
   }
-  updateCartItems = (cartItems) => {
-    this.setState({shoppingCart: cartItems});
-  }
-  updateProductQuantity = (productId, productSize, quantity) => {
 
+  addCartItem = (productId, product, size, quantity) => {
+    let updatedCart = addToCart({...this.state.shoppingCart}, productId, product, size, quantity);
+    this.setState({shoppingCart: updatedCart});
   }
+
+  removeCartItem = (cartItemId, cartItemSize) => {
+    let updatedCart = removeFromCart({...this.state.shoppingCart}, cartItemId, cartItemSize);
+    this.setState({shoppingCart: updatedCart});
+  }
+
+  updateCartItemQty = (productId, quantity) => {
+    let updatedCart = updateItemQty({...this.state.shoppingCart}, quantity, productId);
+    this.setState({shoppingCart: updatedCart});
+  }
+
   render() {
     return (
         <BrowserRouter basename="/lamode">
-          <React.Fragment>
             <CartUserContext.Provider value={this.state}>
               <Header />
               
@@ -76,15 +88,18 @@ class App extends Component {
                 <Switch>
                   <Route path="/" exact component={Home} />
                   <Route path="/cart" component={Cart} />
+                  <Route path="/pay" component={PaymentDetails} />
                   <Route path="/checkout" component={Checkout} />
                   <Route path="/login" component={Login} />
-                  <Route path="/categories/:main/:sub?" exact component={Categories} />
+                  <Route path="/categories/:main/:sub?" 
+                    exact 
+                    render={(routerProps) => (<Categories cookies={this.props.cookies} {...routerProps} /> )} 
+                  />
                   <Route path="/categories/:main/:sub/:productname" component={Product} />
                 </Switch>
                 <Footer />
               </Suspense>
             </CartUserContext.Provider>
-          </React.Fragment>
         </BrowserRouter>
     );
   }
