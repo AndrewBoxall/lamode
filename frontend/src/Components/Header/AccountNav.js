@@ -3,10 +3,11 @@ import './AccountNav.css';
 import { Link } from 'react-router-dom';
 import cartIconImage from '../../images/bag-icon.jpg';
 import userIconImage from '../../images/user.svg';
-import {CartUserContext} from '../../javascript/CartUserContext';
+import { CartUserContext } from '../../javascript/CartUserContext';
 
 class AccountNav extends Component {
   static contextType = CartUserContext;
+  
   render() {
     return (
 			<div id="account-navigation">
@@ -15,7 +16,7 @@ class AccountNav extends Component {
         </Link>
         <Link id="header-cart-icon" to="/cart" title="Cart">
           <img src={cartIconImage} alt="cart"></img>
-          <span className="cart-items-counter">{this.context.shoppingCart.length}</span>
+          <span className="cart-items-counter">{this.context.shoppingCart.totalItems}</span>
         </Link>
 			</div>
     );
