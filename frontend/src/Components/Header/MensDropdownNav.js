@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import SharedNavColumn from './SharedNavColumn';
 import NewReleasesColumn from './NewReleasesColumn';
-import mensReleases from '../../images/mens5.jpg';
+import NewReleasesMens from '../../images/landingpage-nav-icons/new-releases-mens.jpg';
 
 function MensDropdownNav(props) {
 	return (
@@ -35,7 +35,7 @@ function MensDropdownNav(props) {
 					</ul>
 				</div>
 				<div className="flex-grow-1"></div>
-				<NewReleasesColumn category={'mens'} image={mensReleases} />
+				<NewReleasesColumn category={'mens'} image={NewReleasesMens} />
 			</div>
 			<Link className="navigation-link" to="/categories/mens">MENS</Link>
 		</li>
