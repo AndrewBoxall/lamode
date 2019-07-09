@@ -13,7 +13,7 @@ import { CartUserContext } from './javascript/CartUserContext';
 import { addToCart, removeFromCart, updateItemQty } from './javascript/cartFunctions';
 import createSession from './javascript/createSession';
 import { loadShopItems } from './javascript/loadShopItems';
-import { loadShopItemssql } from './javascript/loadShopItemsMSSQL';
+//import { loadShopItemssql } from './javascript/loadShopItemsMSSQL';
 import PaymentDetails from './Components/Body/CheckoutPages/PaymentDetails';
 var Cookies = require('js-cookie');
 
@@ -47,7 +47,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    loadShopItemssql();
+    //loadShopItemssql();
     loadShopItems().then((response) => {
       this.setState({storeItems: response})
     });
