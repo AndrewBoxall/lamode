@@ -30,9 +30,9 @@ class Categories extends Component {
     let fetchUrl;
 
     if(subCategory){
-      fetchUrl = `http://localhost:3000/lamode/categories/${mainCategory}/${subCategory}`;
+      fetchUrl = `http://localhost:80/lamode/categories/${mainCategory}/${subCategory}`;
     } else {
-      fetchUrl = `http://localhost:3000/lamode/categories/${mainCategory}`;
+      fetchUrl = `http://localhost:80/lamode/categories/${mainCategory}`;
     }
     let data;
     data = await getProducts(fetchUrl);

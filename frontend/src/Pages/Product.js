@@ -15,7 +15,7 @@ class Product extends Component {
   }
   async componentDidMount(){
 			let productName = this.props.match.params.productname;	
-			let fetchUrl = `http://localhost:3000/lamode/categories/any/any/${productName}`;
+			let fetchUrl = `http://localhost:80/lamode/categories/any/any/${productName}`;
 			let data;
 			
 			data = await getProducts(fetchUrl);
