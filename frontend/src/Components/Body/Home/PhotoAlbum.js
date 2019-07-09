@@ -3,15 +3,15 @@ import './PhotoAlbum.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PhotoAlbumCard from './PhotoAlbumCard';
 
-import mens2 from '../../../images/mens2.jpg';
-import mens3 from '../../../images/mens3.jpg';
-import mens4 from '../../../images/mens4.jpg';
-import mens7 from '../../../images/mens7.jpg';
-import womens3 from '../../../images/womens3.jpg';
-import womens4 from '../../../images/womens4.jpg';
-import womens5 from '../../../images/womens5.jpg';
-import womens6 from '../../../images/womens6.jpg';
-import womens7 from '../../../images/womens7.jpg';
+import instagram1L from '../../../images/landingpage-instagram-looks/instagram1-large.jpg';
+import instagram2M from '../../../images/landingpage-instagram-looks/instagram2-medium.jpg';
+import instagram3S from '../../../images/landingpage-instagram-looks/instagram3-small.jpg';
+import instagram4S from '../../../images/landingpage-instagram-looks/instagram4-small.jpg';
+import instagram5M from '../../../images/landingpage-instagram-looks/instagram5-medium.jpg';
+import instagram6S from '../../../images/landingpage-instagram-looks/instagram6-small.jpg';
+import instagram7S from '../../../images/landingpage-instagram-looks/instagram7-small.jpg';
+import instagram8M from '../../../images/landingpage-instagram-looks/instagram8-medium.jpg';
+import instagram9M from '../../../images/landingpage-instagram-looks/instagram9-medium.jpg';
 
 class PhotoAlbum extends Component {
   render() {
@@ -22,15 +22,15 @@ class PhotoAlbum extends Component {
 				<FontAwesomeIcon className="instagram-icon" icon={['fab', 'instagram']} />
 			</div>
 			<div className="shop-instagram-grid">
-				<PhotoAlbumCard itemNumber={1} cardImage={mens2} />
-				<PhotoAlbumCard itemNumber={2} cardImage={mens3} />
-				<PhotoAlbumCard itemNumber={3} cardImage={womens3} />
-				<PhotoAlbumCard itemNumber={4} cardImage={womens6} />
-				<PhotoAlbumCard itemNumber={5} cardImage={mens4} />
-				<PhotoAlbumCard itemNumber={6} cardImage={womens4} />
-				<PhotoAlbumCard itemNumber={7} cardImage={mens7} />
-				<PhotoAlbumCard itemNumber={8} cardImage={womens5} />
-				<PhotoAlbumCard itemNumber={9} cardImage={womens7} />
+				<PhotoAlbumCard itemNumber={1} cardImage={instagram1L} />
+				<PhotoAlbumCard itemNumber={2} cardImage={instagram2M} />
+				<PhotoAlbumCard itemNumber={3} cardImage={instagram3S} />
+				<PhotoAlbumCard itemNumber={4} cardImage={instagram4S} />
+				<PhotoAlbumCard itemNumber={5} cardImage={instagram5M} />
+				<PhotoAlbumCard itemNumber={6} cardImage={instagram6S} />
+				<PhotoAlbumCard itemNumber={7} cardImage={instagram7S} />
+				<PhotoAlbumCard itemNumber={8} cardImage={instagram8M} />
+				<PhotoAlbumCard itemNumber={9} cardImage={instagram9M} />
 			</div>
 		</div>
     );
