@@ -5,9 +5,9 @@ import PromotionalBanner from '../Components/Body/Home/PromotionalBanner';
 import PhotoAlbum from '../Components/Body/Home/PhotoAlbum';
 import CategoryCard from '../Components/Body/Home/CategoryCard';
 /* import images */
-import categoryMens from '../images/category-mens.jpg';
-import categoryWomens from '../images/category-womens.jpg';
-import categoryAcc from '../images/category-accessories.jpg';
+import categoryMens from '../images/landingpage-categories/category-mens.jpg';
+import categoryWomens from '../images/landingpage-categories/category-womens.jpg';
+import categoryAcc from '../images/landingpage-categories/category-accessories.jpg';
 
 class Home extends Component {
   render() {
