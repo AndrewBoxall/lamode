@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import AccountNav from './AccountNav';
 import MainNav from './MainNav';
 
-import logo from '../../images/lamode-logo.jpg';
+import websiteLogo from '../../images/landingpage-sitelogo/lamode-logo.jpg';
 
 class Header extends Component {
   render() {
@@ -12,7 +12,7 @@ class Header extends Component {
         <header>
     			<div id="website-header">
     				<Link to="/">
-    					<img id="website-logo" src={logo} alt="LaMode logo"></img>
+    					<img id="website-logo" src={websiteLogo} alt="LaMode logo"></img>
     				</Link>
     				<AccountNav />
   			  </div>
