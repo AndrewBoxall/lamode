@@ -1,5 +1,5 @@
 export default function sendShippingInfo(dataToSend) {
-  let submitResult = fetch('http://localhost:80/lamode/submitShippingAndBillingInfo', {
+  let submitResult = fetch('http://localhost:80/lamode/submitShippingBillingInfo', {
     method: "POST",
     mode: "cors",
     headers: {
