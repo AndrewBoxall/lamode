@@ -1,6 +1,6 @@
 export default function createSession() {
   let returnData;
-  returnData = fetch('http://localhost:4000/lamode/createSession', {
+  returnData = fetch('http://localhost:80/lamode/createSession', {
     method: "GET",
     mode: "cors",
     headers: {

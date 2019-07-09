@@ -1,7 +1,7 @@
 let shopDatasql; 
 
 async function loadShopItemssql() {
-  shopDatasql = await fetch('http://localhost:4000/lamode/sqlcategories/all', {
+  shopDatasql = await fetch('http://localhost:80/lamode/sqlcategories/all', {
     method: "GET",
     mode: "cors",
     headers: {

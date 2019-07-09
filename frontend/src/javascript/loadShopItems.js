@@ -1,7 +1,7 @@
 let shopData; 
 
 async function loadShopItems() {
-  shopData = await fetch('http://localhost:4000/lamode/categories/all', {
+  shopData = await fetch('http://localhost:80/lamode/categories/all', {
     method: "GET",
     mode: "cors",
     headers: {
